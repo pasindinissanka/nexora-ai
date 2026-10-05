@@ -2,7 +2,7 @@
 // NEXORA AI V3
 // =========================================================
 
-const API_URL = "https://refuse-kevin-golden-terrace.trycloudflare.com";
+const API_URL = "https://stress-progressive-patches-auctions.trycloudflare.com";
 
 let conversationHistory = [];
 
