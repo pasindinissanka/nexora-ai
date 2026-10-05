@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#070b17">
+
+    <title>NEXORA AI</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Markdown renderer -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+<!-- ================= BACKGROUND ================= -->
+
+<div class="background">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
+    <div class="grid"></div>
+</div>
+
+
+<div class="app">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div>
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                ✦
+            </div>
+
+            <div>
+                <h2>NEXORA</h2>
+                <span>ARTIFICIAL INTELLIGENCE</span>
+            </div>
+
+        </div>
+
+
+        <button class="new-chat" onclick="newChat()">
+            <span>＋</span>
+            New Conversation
+        </button>
+
+
+        <div class="nav-title">
+            INTELLIGENCE
+        </div>
+
+
+        <nav>
+
+            <button class="nav-item active">
+                <span class="nav-icon">✦</span>
+
+                <div>
+                    <strong>AI Chat</strong>
+                    <small>Intelligent conversation</small>
+                </div>
+            </button>
+
+
+            <button class="nav-item">
+                <span class="nav-icon">🌐</span>
+
+                <div>
+                    <strong>Live Web</strong>
+                    <small>Real-time intelligence</small>
+                </div>
+            </button>
+
+
+            <button class="nav-item">
+                <span class="nav-icon">📄</span>
+
+                <div>
+                    <strong>Documents</strong>
+                    <small>Analyze your files</small>
+                </div>
+            </button>
+
+
+            <button class="nav-item">
+                <span class="nav-icon">◉</span>
+
+                <div>
+                    <strong>Vision</strong>
+                    <small>Understand images</small>
+                </div>
+            </button>
+
+
+            <button class="nav-item">
+                <span class="nav-icon">🧠</span>
+
+                <div>
+                    <strong>Memory</strong>
+                    <small>Personal intelligence</small>
+                </div>
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="core-status">
+
+            <div class="status-heading">
+                <span>NEXORA CORE</span>
+
+                <span class="status-dot"></span>
+            </div>
+
+            <strong>Intelligence systems ready</strong>
+
+            <div class="status-row">
+                <span>AI Engine</span>
+                <b>ONLINE</b>
+            </div>
+
+            <div class="status-row">
+                <span>Web Intelligence</span>
+                <b>READY</b>
+            </div>
+
+            <div class="status-row">
+                <span>Vision System</span>
+                <b>READY</b>
+            </div>
+
+        </div>
+
+
+        <button class="settings-button">
+            ⚙️ Settings
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-left">
+
+        <button
+            class="mobile-menu"
+            onclick="toggleSidebar()">
+            ☰
+        </button>
+
+
+        <div class="header-logo">
+            ✦
+        </div>
+
+
+        <div>
+            <strong>NEXORA AI</strong>
+            <small>Advanced Intelligence System</small>
+        </div>
+
+    </div>
+
+
+    <div class="connection-status">
+
+        <span class="connection-dot"></span>
+
+        <div>
+            <strong>ONLINE</strong>
+            <small>Secure connection</small>
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= CHAT ================= -->
+
+<section
+    id="chatArea"
+    class="chat-area">
+
+
+<!-- WELCOME -->
+
+<div
+    id="welcome"
+    class="welcome">
+
+
+    <div class="nexora-core">
+
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+
+        <div class="core-light"></div>
+
+        <div class="core-symbol">
+            ✦
+        </div>
+
+    </div>
+
+
+    <div class="welcome-label">
+        NEXT GENERATION INTELLIGENCE
+    </div>
+
+
+    <h1>
+        Intelligence,
+        <span>elevated.</span>
+    </h1>
+
+
+    <p class="welcome-subtitle">
+
+        Meet NEXORA — your intelligent partner for
+        knowledge, discovery, analysis and creation.
+
+    </p>
+
+
+
+<!-- FEATURE CARDS -->
+
+<div class="feature-grid">
+
+
+<button
+    class="feature-card"
+    onclick="useSuggestion(
+    'Search the web for the latest developments in artificial intelligence'
+    )">
+
+    <div class="feature-top">
+
+        <div class="feature-icon">
+            🌐
+        </div>
+
+        <span>
+            LIVE
+        </span>
+
+    </div>
+
+    <h3>
+        Explore the Web
+    </h3>
+
+    <p>
+        Discover current information,
+        research and recent developments.
+    </p>
+
+    <div class="feature-arrow">
+        →
+    </div>
+
+</button>
+
+
+
+<button
+    class="feature-card"
+    onclick="useSuggestion(
+    'Help me analyze a document'
+    )">
+
+    <div class="feature-top">
+
+        <div class="feature-icon">
+            📄
+        </div>
+
+        <span>
+            ANALYZE
+        </span>
+
+    </div>
+
+    <h3>
+        Understand Documents
+    </h3>
+
+    <p>
+        Analyze reports, PDFs and
+        complex information intelligently.
+    </p>
+
+    <div class="feature-arrow">
+        →
+    </div>
+
+</button>
+
+
+
+<button
+    class="feature-card"
+    onclick="useSuggestion(
+    'Help me analyze an image'
+    )">
+
+    <div class="feature-top">
+
+        <div class="feature-icon">
+            ◉
+        </div>
+
+        <span>
+            VISION
+        </span>
+
+    </div>
+
+    <h3>
+        Visual Intelligence
+    </h3>
+
+    <p>
+        Understand images and explore
+        visual information.
+    </p>
+
+    <div class="feature-arrow">
+        →
+    </div>
+
+</button>
+
+
+
+<button
+    class="feature-card"
+    onclick="useSuggestion(
+    'What do you remember about me?'
+    )">
+
+    <div class="feature-top">
+
+        <div class="feature-icon">
+            🧠
+        </div>
+
+        <span>
+            MEMORY
+        </span>
+
+    </div>
+
+    <h3>
+        Personal Intelligence
+    </h3>
+
+    <p>
+        Use remembered context for
+        more useful conversations.
+    </p>
+
+    <div class="feature-arrow">
+        →
+    </div>
+
+</button>
+
+
+</div>
+
+
+<div class="capability-line">
+
+    <span>✦ Intelligent Reasoning</span>
+
+    <span>🌐 Live Knowledge</span>
+
+    <span>◉ Vision</span>
+
+    <span>📄 Document Analysis</span>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= COMPOSER ================= -->
+
+<div class="composer-wrapper">
+
+
+<div class="composer">
+
+    <button
+        class="attach-button"
+        title="Attach file">
+        ＋
+    </button>
+
+
+    <textarea
+        id="messageInput"
+        rows="1"
+        placeholder="Message NEXORA..."
+    ></textarea>
+
+
+    <button
+        class="voice-button"
+        title="Voice input">
+        🎙
+    </button>
+
+
+    <button
+        class="send-button"
+        onclick="sendMessage()"
+        title="Send message">
+        ➤
+    </button>
+
+</div>
+
+
+<div class="composer-footer">
+
+    <span>
+        ✦ NEXORA Intelligence
+    </span>
+
+    <span>
+        AI can make mistakes. Verify important information.
+    </span>
+
+</div>
+
+
+</div>
+
+
+</main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
