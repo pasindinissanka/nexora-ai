@@ -8,7 +8,18 @@ const API_URL = "https://nexora-ai-backend.pasindinissanka27.workers.dev";
 
 
 
-let conversationHistory = [];
+
+let conversationHistory = JSON.parse(
+    localStorage.getItem("nexora_chat_history") || "[]"
+);
+
+function saveChatHistory() {
+    localStorage.setItem(
+        "nexora_chat_history",
+        JSON.stringify(conversationHistory)
+    );
+}
+
 
 
 // ================= SEND MESSAGE =================
@@ -76,6 +87,8 @@ async function sendMessage() {
             role: "assistant",
             content: answer
         });
+
+     saveChatHistory();
 
     }
 
@@ -226,3 +239,10 @@ if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("./service-worker.js");
     });
 }
+window.addEventListener("DOMContentLoaded", () => {
+    conversationHistory.forEach(message => {
+        if (message.role === "user" || message.role === "assistant") {
+            addMessage(message.content, message.role);
+        }
+    });
+});
