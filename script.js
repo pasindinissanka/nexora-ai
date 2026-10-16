@@ -2,7 +2,9 @@
 // NEXORA AI V3
 // =========================================================
 
-const API_URL = "https://stress-progressive-patches-auctions.trycloudflare.com";
+
+const API_URL = "https://rabbit-optimize-besides-methods.trycloudflare.com";
+
 
 let conversationHistory = [];
 
