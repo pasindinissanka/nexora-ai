@@ -178,12 +178,30 @@ function useSuggestion(text) {
 
 // ================= NEW CHAT =================
 
+
+function archiveCurrentChat() {
+    if (conversationHistory.length === 0) return;
+
+    const chats = JSON.parse(
+        localStorage.getItem("nexora_saved_chats") || "[]"
+    );
+
+    chats.unshift({
+        id: Date.now().toString(),
+        title: conversationHistory.find(m => m.role === "user")?.content.slice(0, 45) || "New Conversation",
+        messages: [...conversationHistory]
+    });
+
+    localStorage.setItem("nexora_saved_chats", JSON.stringify(chats));
+}
+
 function newChat() {
-
+    archiveCurrentChat();
     conversationHistory = [];
-
+    localStorage.removeItem("nexora_chat_history");
     location.reload();
 }
+
 
 
 // ================= MOBILE MENU =================
