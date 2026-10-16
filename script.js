@@ -20,7 +20,18 @@ function getSavedChats() {
         return [];
     }
 }
+const oldChats = localStorage.getItem("nexora_saved_chats");
 
+if (oldChats) {
+    try {
+        const parsed = JSON.parse(oldChats);
+        if (!Array.isArray(parsed)) {
+            localStorage.removeItem("nexora_saved_chats");
+        }
+    } catch {
+        localStorage.removeItem("nexora_saved_chats");
+    }
+}
 let savedChats = getSavedChats();
 let activeChatId = localStorage.getItem(ACTIVE_KEY);
 
