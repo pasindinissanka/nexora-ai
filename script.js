@@ -3,7 +3,9 @@
 // =========================================================
 
 
-const API_URL = "https://rabbit-optimize-besides-methods.trycloudflare.com";
+
+const API_URL = "https://nexora-ai-backend.pasindinissanka27.workers.dev";
+
 
 
 let conversationHistory = [];
