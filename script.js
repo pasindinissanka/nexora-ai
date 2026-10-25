@@ -89,15 +89,6 @@ function saveChatHistory() {
 }
 
 
-function saveChatHistory() {
-    localStorage.setItem(
-        "nexora_chat_history",
-        JSON.stringify(conversationHistory)
-    );
-}
-
-
-
 // ================= SEND MESSAGE =================
 
 async function sendMessage() {
