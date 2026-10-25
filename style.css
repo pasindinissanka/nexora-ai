@@ -1306,3 +1306,133 @@ header {
     }
 
 }
+
+/* ==========================================
+   NEXORA PREMIUM CONVERSATION SIDEBAR
+   ========================================== */
+
+/* New Conversation button */
+.sidebar .new-chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 15px 18px;
+    margin: 18px 0 24px;
+    border: 1px solid rgba(84, 190, 255, 0.35);
+    border-radius: 14px;
+    background: linear-gradient(
+        135deg,
+        #13284b,
+        #182044
+    );
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.sidebar .new-chat:hover {
+    background: linear-gradient(
+        135deg,
+        #204477,
+        #34306e
+    );
+    border-color: #58d5ff;
+    box-shadow: 0 0 20px rgba(67, 174, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+.sidebar .new-chat span {
+    color: #63dfff;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* Previous Chats section */
+#savedChats {
+    margin: 8px 0 26px;
+    padding: 0 2px;
+}
+
+#savedChats h4 {
+    margin: 0 0 14px;
+    padding: 0 10px;
+    color: #91a6ca;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+/* Conversation list */
+#chatHistoryList {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 2px 4px 8px;
+}
+
+/* Individual conversation cards */
+#chatHistoryList .saved-chat-item {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    background: transparent;
+    color: #b8c8e5;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover effects */
+#chatHistoryList .saved-chat-item:hover {
+    background: rgba(61, 108, 190, 0.2);
+    color: #ffffff;
+    border-color: rgba(100, 190, 255, 0.2);
+    transform: translateX(3px);
+}
+
+/* Active conversation */
+#chatHistoryList .saved-chat-item.active {
+    background: linear-gradient(
+        90deg,
+        rgba(35, 98, 170, 0.35),
+        rgba(77, 54, 151, 0.18)
+    );
+    border-left: 3px solid #60d8ff;
+    color: #ffffff;
+}
+
+/* Elegant scrollbar */
+#chatHistoryList::-webkit-scrollbar {
+    width: 4px;
+}
+
+#chatHistoryList::-webkit-scrollbar-thumb {
+    background: #324d76;
+    border-radius: 10px;
+}
+
+/* Mobile-friendly */
+@media (max-width: 768px) {
+    .sidebar .new-chat {
+        padding: 14px;
+    }
+
+    #chatHistoryList {
+        max-height: 220px;
+    }
+}
+
