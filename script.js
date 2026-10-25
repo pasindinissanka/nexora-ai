@@ -86,6 +86,7 @@ function saveChatHistory() {
 
     localStorage.setItem(CHATS_KEY, JSON.stringify(savedChats));
     localStorage.removeItem("nexora_chat_history");
+    showSavedChats();
 }
 
 
